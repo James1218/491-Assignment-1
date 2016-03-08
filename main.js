@@ -147,62 +147,7 @@ Unicorn.prototype.update = function () {
 
     }
     Entity.prototype.update.call(this);
-/*
-    //---------------------------
-    if(this.game.threeKeys) {
-        this.combination = true;
-    }
 
-    if (this.combination) {
-        if(this.combinationAnimation.isDone()) {
-            this.combinationAnimation.elapsedTime = 0;
-            this.combination = false;
-        }
-    }
-
-    if (this.skullHeadCountDown === 100 ) {//&& this.skullHeadNumber !== 2) { //&& this.skullHeadNumber !== 3) {
-
-        var testing = new skullHead(this.game, this.x + 350, this.y , 2);
-        this.game.addEntity(testing);
-        this.skullHeadCountDown = 0;
-        this.skullHeadNumber++;
-    } else {
-        this.skullHeadCountDown++;
-    }
-
-    //------------------------
-    if (this.game.enter) {
-        this.fighting = true;
-    }
-    
-    if (this.fighting) {
-        if (this.fightAnimation.isDone()) {
-            //console.log("we get");
-            if (this.afterSpecialEffect.isDone()) {
-                this.afterSpecialEffect.elapsedTime = 0;
-                this.explosion.elapsedTime = 0;
-                this.preSpecialEffect.elapsedTime = 0;
-                this.fightAnimation.elapsedTime = 0;
-                this.fighting = false;
-            }
-        }
-    }
-
-    //for (var i = 0; i < this.game.entities.length; i++) {
-    //    var ent = this.game.entities[i];
-    //    if (ent !== this && ent !== 1) {
-    //        console.log("Type is skullHead");
-    //        var cl = Entity.prototype.collide.call(this, ent);
-    //        if (cl == COLLIDE_LEFT || cl == COLLIDE_RIGHT) {
-    //            this.direction *= -1;
-    //        }
-    //    }
-    //}
-
-    if (this.x >= 400 || this.x <= -300) {        
-        this.direction *= -1;
-    }
-*/
 
 
     
@@ -219,38 +164,7 @@ Unicorn.prototype.draw = function (ctx) {
 
     Entity.prototype.draw.call(this);
 }
-    /*
-    if (this.jumping) {
-        this.jumpAnimation.drawFrame(this.game.clockTick, ctx, this.x + 300, this.y - 10);
-    } else if (this.fighting) {
-
-        console.log("I am fighting");
-        if (this.fightAnimation.isDone()) {
-            //console.log("here");
-            this.preSpecialEffect.drawFrame(this.game.clockTick, ctx, this.x + 300, this.y);
-            if (this.preSpecialEffect.isDone())
-            {
-                this.explosion.drawFrame(this.game.clockTick, ctx, this.x + 235, this.y - 330);
-                if (this.explosion.isDone())
-                {
-                    this.afterSpecialEffect.drawFrame(this.game.clockTick, ctx, this.x + 235, this.y - 330);
-                }
-            }
-        }
-        else
-        {
-            this.fightAnimation.drawFrame(this.game.clockTick, ctx, this.x + 300, this.y);
-        }
-
-    } else if (this.combination) {
-        this.combinationAnimation.drawFrame(this.game.clockTick, ctx, this.x + 300, this.y);
-    } else {
-        this.animation.drawFrame(this.game.clockTick, ctx, this.x + 300, this.y);
-    }
-*/
-
-
-
+  
 // the "main" code begins here
 
 
